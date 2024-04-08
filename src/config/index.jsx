@@ -1,7 +1,9 @@
-import routes from './routes.config'
+import routes from './routes.config';
+import cookieConfig from './cookies.config';
 
 const config = {
-  routes
-}
+  routes,
+  cookieConfig,
+};
 
-export default config
+export default config;
