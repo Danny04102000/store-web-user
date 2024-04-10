@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { getToken } from './utils/auth';
 import store from './store';
 import { useEffect } from 'react';
-
+import './assets/global.scss';
 function Apps() {
   useEffect(() => {
     const accessToken = getToken();
