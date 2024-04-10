@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+  font-family: 'HelveticaNeue', 'Helvetica Neue', 'Roboto', 'Droid Sans', Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sec-cmn {
+  margin-bottom: 70px;
+}
