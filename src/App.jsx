@@ -1,22 +1,29 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { privateRoutes } from '~/routes';
+import { publicRoutes } from './routes';
 import { Provider } from 'react-redux';
-import { getToken } from './utils/auth';
 import store from './store';
-import { useEffect } from 'react';
+import { Fragment } from 'react';
 import './assets/global.scss';
+
 function Apps() {
-  useEffect(() => {
-    const accessToken = getToken();
-    console.log(accessToken);
-  }, []);
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-          {privateRoutes.map((route, index) => {
+          {publicRoutes.map((route, index) => {
+            const Layout = route.layout === null ? Fragment : route.layout;
             const Page = route.component;
-            return <Route key={index} path={route.path} element={<Page />} />;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
           })}
         </Routes>
       </Router>
