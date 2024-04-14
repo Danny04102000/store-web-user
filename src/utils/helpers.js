@@ -6,6 +6,12 @@ function formatPrice(price) {
   return result;
 }
 
+function calculatePrice(price, percent) {
+  const result = price - ((percent / 100) * price);
+  return formatPrice(result);
+}
+
 export {
   formatPrice,
+  calculatePrice,
 };

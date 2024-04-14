@@ -9,6 +9,9 @@ export default defineConfig({
     host: 'localhost',
     port: 3000,
   },
+  optimizeDeps: {
+  include: ['react-router-dom'],
+},
   build: {
     chunkSizeWarningLimit: 1600,
     rollupOptions: {
