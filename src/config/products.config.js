@@ -1,6 +1,7 @@
 const productConfig = {
   product1: {
     title: 'SẢN PHẨM MỚI',
+    urlDetail: 'https://phatdatbinhthoi.com.vn/thietbibaotrombaokhachbanghongngoaikawasani225dstrang-6706.htm',
     list: [
       {
         image: 'https://phatdatbinhthoi.com.vn/thumb/220x210/2/upload/sanpham/thiet-bi-bao-trom-bao-khach-bang-hong-ngoai-kawasan-i225ds.jpg',
@@ -60,6 +61,7 @@ const productConfig = {
   },
   product2: {
     title: 'CAMERA  VÀ LINH KIỆN CAMERA CHÍNH HÃNG.',
+    urlDetail: 'https://phatdatbinhthoi.com.vn/thietbibaotrombaokhachbanghongngoaikawasani225dstrang-6706.htm',
     list: [
       {
         image: 'https://phatdatbinhthoi.com.vn/thumb/220x210/2/upload/sanpham/thiet-bi-bao-trom-bao-khach-bang-hong-ngoai-kawasan-i225ds.jpg',
@@ -119,6 +121,7 @@ const productConfig = {
   },
   product3: {
     title: 'HOT TREND -HÀNG ĐIỆN  TỬ - ĐIỆN MÁY CHÍNH HÃNG.',
+    urlDetail: 'https://phatdatbinhthoi.com.vn/thietbibaotrombaokhachbanghongngoaikawasani225dstrang-6706.htm',
     list: [
       {
         image: 'https://phatdatbinhthoi.com.vn/thumb/220x210/2/upload/sanpham/thiet-bi-bao-trom-bao-khach-bang-hong-ngoai-kawasan-i225ds.jpg',

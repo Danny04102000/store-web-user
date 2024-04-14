@@ -9,14 +9,16 @@ const ProductItemStyled = styled.div`
     &--image {
       position: relative;
       padding-bottom: 95%;
+      overflow: hidden;
       img {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100%;
         height: 100%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1);
         object-fit: cover;
+        transition: transform 0.3s linear;
       }
     }
     &--sale {
@@ -39,12 +41,22 @@ const ProductItemStyled = styled.div`
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        -webkit-line-clamp: 2; /* Số dòng hiển thị */
-        line-clamp: 2; /* Số dòng hiển thị */
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
       }
       &--price {
         color: rgb(238,77,45);
         font-size: 1.5rem;
+        > * {
+          display: block;
+        }
+      }
+    }
+  }
+  &:hover {
+    .product--image {
+      img {
+        transform: translate(-50%, -50%) scale(1.2);
       }
     }
   }

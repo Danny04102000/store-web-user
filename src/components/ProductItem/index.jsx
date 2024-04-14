@@ -1,5 +1,4 @@
-import React from 'react';
-import { formatPrice } from '~/utils/helpers';
+import { formatPrice, calculatePrice } from '~/utils/helpers';
 
 import ProductItemStyled from './styled/ProductItemStyled';
 
@@ -15,7 +14,12 @@ function ProductItem({ image, title, price, percent, link }) {
       </div>
       <div className="product__content">
         <h3 className="product__content--title">{title}</h3>
-        <div className="product__content--price">{formatPrice(price)} VND</div>
+        <div className="product__content--price">
+          {!percent ? <span>{formatPrice(price)} VND</span> : <del>{formatPrice(price)} VND</del>}
+          {price && percent && (
+            <span>{calculatePrice(parseFloat(price), parseFloat(percent))} VND</span>
+          )}
+        </div>
       </div>
     </ProductItemStyled>
   );
