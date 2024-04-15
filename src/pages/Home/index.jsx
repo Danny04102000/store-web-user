@@ -1,17 +1,17 @@
 import ProductList from '~/components/ProductList';
 import useRedirect from '~/hooks/useRedirect';
 import config from '~/config';
+import { HomeStyled } from './styled';
 
 const { productConfig, routes } = config;
 
-import { HomeStyled } from './styled';
-const redirect = useRedirect();
-
-const handleGoToDetail = (id) => {
-  redirect.push(routes.product + `/${id}`);
-};
-
 function index() {
+  const redirect = useRedirect();
+
+  const handleGoToDetail = (id) => {
+    redirect.push(routes.product + `/${id}`);
+  };
+
   return (
     <HomeStyled>
       <div className="inner">
