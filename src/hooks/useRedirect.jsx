@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom';
 function useRedirect() {
   const navigate = useNavigate();
 
-  const push = (route, options= {}) => {
+  const push = (route, options = {}) => {
     navigate(route, options);
-  }
+  };
 
-  const goBack =(scrollTop) => {
+  const goBack = (scrollTop) => {
     if (scrollTop) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     navigate(-1);
-  }
+  };
 
   return { push, goBack };
 }
